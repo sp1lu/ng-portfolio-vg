@@ -15,8 +15,25 @@ html {
 
 .dark {
     --f-default: rgba(255, 255, 255, 1);
+    --f-muted: rgba(112, 112, 112, 1);
     --f-contrast: rgba(0, 0, 0, 1);
     --f-accent: rgba(248, 221, 13, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--f-accent);
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+}
+
+.page-title {
+    text-align: center;
+    margin: 0 0 3rem 0;
 }
 
 // --bright-blue: oklch(51.01% 0.274 263.83);

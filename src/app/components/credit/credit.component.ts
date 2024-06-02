@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './credit.component.scss'
 })
 export class CreditComponent {
-  @Input() public role: string = '';
   @Input() public credit: string = '';
+  @Input() public name: string = '';
 }

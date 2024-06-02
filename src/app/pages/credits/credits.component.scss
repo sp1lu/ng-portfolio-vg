@@ -1,0 +1,12 @@
+:host {
+    display: block;
+    padding: 8% 4%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.credits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
