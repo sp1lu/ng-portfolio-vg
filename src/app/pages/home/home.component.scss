@@ -1,0 +1,53 @@
+:host {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.logo {
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    height: auto;
+}
+
+.main-menu {
+    text-align: center;
+    width: 100%;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.main-menu ul li a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    color: var(--f-default);
+    width: 100%;
+    padding: 2px 0;
+    display: block;
+
+    &:hover {
+        color: var(--f-contrast);
+        background-image:
+            linear-gradient(var(--f-accent), var(--f-accent)),
+            url('../../../assets/images/texture.jpg');
+        background-blend-mode: multiply;
+    }
+}
