@@ -12,7 +12,7 @@ export class ThreeComponent {
   private scene: THREE.Scene = new THREE.Scene();
   private camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 10000);
   private renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-  private clock: THREE.Clock = new THREE.Clock();
+  private aspectRatio: number = innerWidth / innerHeight;
 
   private amountX: number = 50;
   private amountY: number = 50;
@@ -40,12 +40,13 @@ export class ThreeComponent {
 
   private initWaves(): void {
     let i: number = 0;
+    const aspectRatio = innerWidth / innerHeight;
 
     for (let ix = 0; ix < this.amountX; ix++) {
       for (let iy = 0; iy < this.amountY; iy++) {
         this.positions[i] = ix * this.separation - (this.amountX * this.separation) / 2;
         this.positions[i + 1] = 0;
-        this.positions[i + 2] = iy * this.separation - (this.amountY * this.separation) / 2;
+        this.positions[i + 2] = iy * this.separation / aspectRatio - (this.amountY * this.separation / aspectRatio) / 2;
         i += 3;
       }
     }
@@ -109,9 +110,9 @@ export class ThreeComponent {
         i += 3;
       }
     }
-      this.particles.geometry.attributes['position'].needsUpdate = true;
-      this.renderer.render(this.scene, this.camera);
-      this.count += 0.025;
+    this.particles.geometry.attributes['position'].needsUpdate = true;
+    this.renderer.render(this.scene, this.camera);
+    this.count += 0.025;
   }
 
   private animate = () => {
@@ -123,6 +124,23 @@ export class ThreeComponent {
     this.camera.aspect = innerWidth / innerHeight;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(innerWidth, innerHeight);
+
+    const aspectRatio = innerWidth / innerHeight;
+    this.separation = innerWidth / this.amountX;
+
+    let i: number = 0;
+
+    for (let ix = 0; ix < this.amountX; ix++) {
+      for (let iy = 0; iy < this.amountY; iy++) {
+        this.positions[i] = ix * this.separation - (this.amountX * this.separation) / 2;
+        this.positions[i + 1] = 0;
+        this.positions[i + 2] = iy * this.separation / aspectRatio - (this.amountY * this.separation / aspectRatio) / 2;
+        i += 3;
+      }
+    }
+
+    this.particles.geometry.attributes['position'].needsUpdate = true;
+
     this.renderer.render(this.scene, this.camera);
   }
 }
