@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-audio',
@@ -17,6 +17,15 @@ export class AudioComponent {
   public set isMuted(value: boolean) {
     this._isMuted = value;
     this.audio.muted = this.isMuted;   
+  }
+
+  private _volume: number = 1;
+  public get volume(): number {
+    return this._volume;
+  }
+  @Input() set volume(value: number) {
+    if (!value) return;
+    this._volume = value;
   }
 
   public ngOnInit(): void {
