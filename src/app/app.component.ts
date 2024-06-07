@@ -1,16 +1,29 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterEvent, RouterOutlet } from '@angular/router';
 import { ThreeComponent } from './components/three/three.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { AudioComponent } from './components/audio/audio.component';
+import { NgStyle } from '@angular/common';
+import { PartialObserver } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ThreeComponent, CopyrightComponent, AudioComponent],
+  imports: [RouterOutlet, ThreeComponent, CopyrightComponent, AudioComponent, NgStyle],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ng-portfolio-vg';
+  public title = 'ng-portfolio-vg';
+  public isHomepage: boolean = false;
+
+  constructor(private router: Router) {}
+
+  public ngOnInit(): void {
+    this.router.events.subscribe(event => {      
+      if (event instanceof NavigationEnd) {
+        this.isHomepage = this.router.url === '/' ? true : false;
+      }
+    })
+  }
 }

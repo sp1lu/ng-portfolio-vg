@@ -3,6 +3,6 @@
 </main>
 <footer>
   <app-copyright />
-  <app-audio />
+  <app-audio [ngStyle]="{'visibility': isHomepage ? 'hidden' : 'visible'}" />
 </footer>
 <app-three />

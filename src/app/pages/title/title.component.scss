@@ -1,0 +1,29 @@
+:host {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.pulse {
+    cursor: default;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .2;
+    }
+}
