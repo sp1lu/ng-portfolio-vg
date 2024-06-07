@@ -1,11 +1,11 @@
 import { Component, effect } from '@angular/core';
-import { MasterVolumeComponent } from '../../components/master-volume/master-volume.component';
 import { AudioService } from '../../services/audio.service';
+import { VolumeControllerComponent } from '../../components/volume-controller/volume-controller.component';
 
 @Component({
   selector: 'app-options',
   standalone: true,
-  imports: [MasterVolumeComponent],
+  imports: [VolumeControllerComponent],
   templateUrl: './options.component.html',
   styleUrl: './options.component.scss'
 })

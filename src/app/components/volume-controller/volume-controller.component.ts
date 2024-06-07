@@ -2,13 +2,13 @@ import { DecimalPipe } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-master-volume',
+  selector: 'app-volume-controller',
   standalone: true,
   imports: [DecimalPipe],
-  templateUrl: './master-volume.component.html',
-  styleUrl: './master-volume.component.scss'
+  templateUrl: './volume-controller.component.html',
+  styleUrl: './volume-controller.component.scss'
 })
-export class MasterVolumeComponent {
+export class VolumeControllerComponent {
   @Input() public volume: number = 1;
   @Output() public volumeChangedEvent: EventEmitter<number> = new EventEmitter<number>();
 
