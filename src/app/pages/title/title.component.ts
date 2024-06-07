@@ -1,5 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
+import { AudioService } from '../../services/audio.service';
 
 @Component({
   selector: 'app-title',
@@ -12,7 +13,7 @@ export class TitleComponent {
   private clickListener: (() => void) | null = null;
   private keydownListener: (() => void) | null = null;
 
-  constructor(private renderer: Renderer2, private router: Router) { }
+  constructor(private renderer: Renderer2, private router: Router, private audioService: AudioService) { }
 
   public ngOnInit(): void {
     this.clickListener = this.renderer.listen('document', 'click', this.onDocumentClick.bind(this));
@@ -26,9 +27,11 @@ export class TitleComponent {
 
   private onDocumentClick(event: MouseEvent): void {
     this.router.navigate(['/main']);
+    this.audioService.isStarted.set(true);
   }
 
   private onDocumentKeydown(event: KeyboardEvent): void {
     this.router.navigate(['/main']);
+    this.audioService.isStarted.set(true);
   }
 }

@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router, RouterEvent, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { ThreeComponent } from './components/three/three.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { AudioComponent } from './components/audio/audio.component';
 import { NgStyle } from '@angular/common';
-import { PartialObserver } from 'rxjs';
 
 @Component({
   selector: 'app-root',
