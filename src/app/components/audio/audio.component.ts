@@ -26,8 +26,7 @@ export class AudioComponent {
   public get volume(): number {
     return this._volume;
   }
-  public set volume(value: number) {
-    if (!value) return;
+  public set volume(value: number) {  
     this._volume = value;
     this.audio.volume = this.volume;
   }
