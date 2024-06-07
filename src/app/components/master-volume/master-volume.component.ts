@@ -1,9 +1,10 @@
+import { DecimalPipe } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-master-volume',
   standalone: true,
-  imports: [],
+  imports: [DecimalPipe],
   templateUrl: './master-volume.component.html',
   styleUrl: './master-volume.component.scss'
 })
