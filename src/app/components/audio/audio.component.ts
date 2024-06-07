@@ -1,4 +1,4 @@
-import { Component, Input, effect } from '@angular/core';
+import { Component, effect } from '@angular/core';
 import { AudioService } from '../../services/audio.service';
 
 @Component({
@@ -10,7 +10,17 @@ import { AudioService } from '../../services/audio.service';
 })
 export class AudioComponent {
   public audio: HTMLAudioElement = new Audio('../../assets/audio/gloomy_sad_background_music.mp3');
-  public isStarted: boolean = false;
+
+  private _isStarted: boolean = false;
+  public get isStarted(): boolean {
+    return this._isStarted;
+  }
+  public set isStarted(value: boolean) {
+    this._isStarted = value;
+    if (!value) return;
+    this.audio.play();
+    this.audio.loop = true;
+  }
 
   private _volume: number = 1;
   public get volume(): number {
@@ -26,14 +36,10 @@ export class AudioComponent {
   public get isMuted(): boolean {
     return this._isMuted;
   }
-  @Input() public set isMuted(value: boolean) {
+  public set isMuted(value: boolean) {
     this._isMuted = value;
     this.audio.muted = this.isMuted;
-
-    if (this.audio.currentTime === 0) {
-      this.audio.play();
-      this.audio.loop = true;
-    }
+    if (this.isMuted && !this.isStarted) this.isStarted = true;
   }
 
   constructor(private audioService: AudioService) {
@@ -46,7 +52,7 @@ export class AudioComponent {
     effect(() => this.volume = this.audioService.volume());
   }
 
-  public toggleVolume(): void {
+  public toggleVolume(): void {    
     this.isMuted ? this.isMuted = false : this.isMuted = true;
   }
 }
