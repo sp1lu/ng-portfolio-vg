@@ -27,11 +27,11 @@ export class TitleComponent {
 
   private onDocumentClick(event: MouseEvent): void {
     this.router.navigate(['/main']);
-    this.audioService.isStarted.set(true);
+    this.audioService.isMusicStarted = true;
   }
 
   private onDocumentKeydown(event: KeyboardEvent): void {
     this.router.navigate(['/main']);
-    this.audioService.isStarted.set(true);
+    this.audioService.isMusicStarted = true;
   }
 }

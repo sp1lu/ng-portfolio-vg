@@ -1,2 +1,3 @@
 <h1 class="page-title">Options</h1>
-<app-volume-controller [volume]="volume" (volumeChangedEvent)="volumeChanged($event)" />
+<app-volume-controller channel="Music"  [(volume)]="musicVolume" (volumeChange)="musicVolumeChanged($event)" />
+<app-volume-controller channel="SFX"  [(volume)]="soundVolume" (volumeChange)="soundVolumeChanged($event)" />

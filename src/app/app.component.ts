@@ -4,6 +4,7 @@ import { ThreeComponent } from './components/three/three.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { AudioComponent } from './components/audio/audio.component';
 import { NgStyle } from '@angular/common';
+import { AudioService } from './services/audio.service';
 
 @Component({
   selector: 'app-root',
@@ -15,14 +16,21 @@ import { NgStyle } from '@angular/common';
 export class AppComponent {
   public title = 'ng-portfolio-vg';
   public isHomepage: boolean = false;
+  public isMusicMuted: boolean;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private audioService: AudioService) {
+    this.isMusicMuted = this.audioService.isAudioMuted;
+  }
 
   public ngOnInit(): void {
     this.router.events.subscribe(event => {      
       if (event instanceof NavigationEnd) {
         this.isHomepage = this.router.url === '/' ? true : false;
       }
-    })
+    });
+  }
+
+  public toggleAudio(value: boolean): void {
+    this.audioService.isAudioMuted = value;
   }
 }

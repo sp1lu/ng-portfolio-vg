@@ -9,11 +9,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './volume-controller.component.scss'
 })
 export class VolumeControllerComponent {
+  @Input() public channel: string = '';
   @Input() public volume: number = 1;
-  @Output() public volumeChangedEvent: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public volumeChange: EventEmitter<number> = new EventEmitter<number>();
 
   public onChange(event: Event): void {  
     const input: HTMLInputElement = event.target as HTMLInputElement;
-    this.volumeChangedEvent.emit(parseFloat(input.value));
+    this.volumeChange.emit(parseFloat(input.value));
   }
 }

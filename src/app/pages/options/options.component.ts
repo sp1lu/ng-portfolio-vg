@@ -10,15 +10,19 @@ import { VolumeControllerComponent } from '../../components/volume-controller/vo
   styleUrl: './options.component.scss'
 })
 export class OptionsComponent {
-  public volume: number = 1;
+  public musicVolume: number;
+  public soundVolume: number;
 
   constructor(private audioService: AudioService) {
-    effect(() => {
-      this.volume = this.audioService.volume();
-    })
+    this.musicVolume = this.audioService.musicVolume;
+    this.soundVolume = this.audioService.soundVolume;
   }
 
-  public volumeChanged(value: number): void {
-    this.audioService.volume.set(value);
+  public musicVolumeChanged(value: number): void {
+    this.audioService.musicVolume = value;
+  }
+
+  public soundVolumeChanged(value: number): void {
+    this.audioService.soundVolume = value;
   }
 }

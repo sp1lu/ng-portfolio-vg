@@ -3,6 +3,6 @@
 </main>
 <footer>
   <app-copyright />
-  <app-audio [ngStyle]="{'visibility': isHomepage ? 'hidden' : 'visible'}" />
+  <app-audio [isMuted]="isMusicMuted" [ngStyle]="{'visibility': isHomepage ? 'hidden' : 'visible'}" (isMutedChange)="toggleAudio($event)" />
 </footer>
 <app-three />
