@@ -25,7 +25,7 @@ export class AudioService {
     if (!this.isMusicStarted) this.isMusicStarted = true;
   }
 
-  private _musicVolume: number = 1;
+  private _musicVolume: number = .25;
   public get musicVolume(): number {
     return this._musicVolume;
   }
@@ -37,7 +37,7 @@ export class AudioService {
 
   public hoverSoundUri: string = '../../assets/audio/menu-selection.mp3';
 
-  private _soundVolume: number = .5;
+  private _soundVolume: number = .1;
   public get soundVolume(): number {
     return this._soundVolume;
   }
@@ -49,12 +49,13 @@ export class AudioService {
 
   public playMusic(): void {
     this.music.play();
+    this.music.volume = this.musicVolume;
     this.music.loop = true;
   }
 
   public toggleAudio(value: boolean): void {
     this.music.muted = value;
-    value ? this.soundVolume = 0 : this.soundVolume = .5;
+    value ? this.soundVolume = 0 : this.soundVolume = .1;
   }
 
   public playSound(audioUri: string): void {

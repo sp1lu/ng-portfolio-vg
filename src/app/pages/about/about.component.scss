@@ -4,3 +4,9 @@
     max-width: 800px;
     margin: auto;
 }
+
+@media screen and (max-width: 576px) {
+    :host {
+        padding: 8% 4% 16% 4%;
+    }
+}

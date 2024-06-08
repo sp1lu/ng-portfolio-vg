@@ -10,7 +10,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class VolumeControllerComponent {
   @Input() public channel: string = '';
-  @Input() public volume: number = 1;
+  @Input() public volume: number = .25;
   @Output() public volumeChange: EventEmitter<number> = new EventEmitter<number>();
 
   public onChange(event: Event): void {  
