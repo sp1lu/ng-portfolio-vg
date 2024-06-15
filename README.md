@@ -1,4 +1,5 @@
 # Videogame ui portfolio
+![Screenshot of the main menu](https://res.cloudinary.com/duuklscys/image/upload/v1718463460/Portfolio/portfolio-vg-main_s7ckgq.png)
 ## 📄 Index
 * [About](#-about)
 * [Built with](#-built-with)
