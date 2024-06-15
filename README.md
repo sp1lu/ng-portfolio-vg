@@ -1,13 +1,13 @@
 # Videogame ui portfolio
 ## 📄 Index
-* [About](#about)
-* [Built with](#built-with)
+* [About](#-about)
+* [Built with](#-built-with)
 * * [Frameworks and libraries](#frameworks-and-libraries)
 * * [Languages](#languages)
 * * [Software](#software)
-* [Roadmap](#roadmap)
-* [Credits](#credits)
-* [Contacts](#contacts)
+* [Roadmap](#-roadmap)
+* [Credits](#-credits)
+* [Contacts](#-contacts)
 
 ## 🔰 About
 Personal portfolio as a link collector of my social accounts.
@@ -42,8 +42,8 @@ Some of the features I'd like to implement in the future.
 - [x] Three js background
 - [x] Background music and SFX
 - [x] Music and SFX volume controllers
-- [] Add resume pdf link
-- [] Change language option
+- [ ] Add resume pdf link
+- [ ] Change language option
 
 ## 🌟 Credits
 Following some sources used as inspiration for the project, as well as music and SFX used for its realization.
