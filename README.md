@@ -1,5 +1,5 @@
 # Videogame ui portfolio
-![Screenshot of the main menu](https://res.cloudinary.com/duuklscys/image/upload/v1718463460/Portfolio/portfolio-vg-main_s7ckgq.png)
+![Screenshot of the main menu](https://res.cloudinary.com/duuklscys/image/upload/v1718477725/Portfolio/qb2vmj2x5umwox0l12as.png)
 ## 📄 Index
 * [About](#-about)
 * [Built with](#-built-with)
@@ -8,6 +8,7 @@
 * * [Software](#software)
 * [Roadmap](#-roadmap)
 * [Credits](#-credits)
+* [Screenshot](#-screenshots)
 * [Contacts](#-contacts)
 
 ## 🔰 About
@@ -52,6 +53,12 @@ Following some sources used as inspiration for the project, as well as music and
 * Logo version inspiration: <a href="https://www.firewatchgame.com/" target="_blank">Firewatch videogame</a>
 * Background music by: <a href="https://www.youtube.com/watch?v=vaSRCBj64vk" target="_blank">Gloomy (Prod. by MX Audio Library)</a>
 * SFX from: <a href="https://pixabay.com/music/" target="_blank">Pixabay Music</a>
+
+## 📷 Screenshots
+![Splash screen](https://res.cloudinary.com/duuklscys/image/upload/v1718477727/Portfolio/bnl95k8gmomucjwhvhfs.png)
+![Main menu](https://res.cloudinary.com/duuklscys/image/upload/v1718477725/Portfolio/qb2vmj2x5umwox0l12as.png)
+![Options](https://res.cloudinary.com/duuklscys/image/upload/v1718477726/Portfolio/ypkjq3obgbqabqy2rjas.png)
+![Credits](https://res.cloudinary.com/duuklscys/image/upload/v1718477726/Portfolio/nutgbmrqzhpiyuhefgpw.png)
 
 ## 📮 Contacts
 Here some places where you can find me.
