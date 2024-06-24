@@ -44,7 +44,7 @@ Some of the features I'd like to implement in the future.
 - [x] Three js background
 - [x] Background music and SFX
 - [x] Music and SFX volume controllers
-- [ ] Add resume pdf link
+- [x] Add resume pdf link
 - [ ] Change language option
 
 ## 🌟 Credits
