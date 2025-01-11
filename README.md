@@ -18,7 +18,7 @@ The aim of the project was to create a single page application that, despite the
 
 Given my love for video games and their industry, the single page application mocks the main menu of a modern game.
 
-Direct link to the project: <a href="https://daviderivolta.com/" target="_blank">www.daviderivolta.com</a>
+Direct link to the project: <a href="https://portfolio-52004.web.app/" target="_blank">https://portfolio-52004.web.app/</a>
 
 ## 🔨 Built with
 Here framework adn libraries used for the realization of the project. The project was intended mainly to learn Three.js 3D library and testing the newset version of Angular framework.
